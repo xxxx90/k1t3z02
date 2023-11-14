@@ -101,4 +101,13 @@ class СalculationKtTest {
         val  result = run(amount=amount)
         assertEquals("Комиссиия за переводы по VK Pay не взимается", result)
     }
+    @Test
+    fun runError() {
+
+        val amount = 10000
+        val previousAmount = 40000
+        val  result = run(amount=amount)
+        assertEquals("Комиссиия не взимается", result)
+        
+    }
 }
